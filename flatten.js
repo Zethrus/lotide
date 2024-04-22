@@ -17,12 +17,12 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const flatten = function(arr) {
-  const flattenedArray = [];
+  let flattenedArray = [];
 
   // Iterate through each item in the array
   arr.forEach((item) => {
     if (Array.isArray(item)) {
-      item.forEach((item) => flattenedArray.push(item));
+      flattenedArray = flattenedArray.concat(item);
     } else {
       // If the item is not an array, push it to the flattenedArray
       flattenedArray.push(item);
