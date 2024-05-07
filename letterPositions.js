@@ -53,7 +53,7 @@ const expectedResult = {
 
 // Loop through the keys in the expectedResult object to compare our results
 for (const key in expectedResult) {
-  assertArraysEqual(result[key], expectedResult[key];
+  assertArraysEqual(result[key], expectedResult[key]);
 }
 // Test for the letter 'e' in the word 'hello' at the second letter position in the string
 assertArraysEqual(letterPositions("hello").e, [1]);
