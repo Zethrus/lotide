@@ -36,4 +36,7 @@ const expectedResult = {
 // Check if output result matches the expected result
 for (const letter in expectedResult) {
   assertEqual(result[letter], expectedResult[letter]);
-}
+};
+
+const emptyResult = countLetters("");
+assertEqual(Object.keys(emptyResult).length, 0); // Check empty string
