@@ -22,7 +22,7 @@ const flatten = function(arr) {
   // Iterate through each item in the array
   arr.forEach((item) => {
     if (Array.isArray(item)) {
-      flattenedArray.push(...item);
+      Array.prototype.push.apply(flattenedArray, item);
     } else {
       // If the item is not an array, push it to the flattenedArray
       flattenedArray.push(item);
