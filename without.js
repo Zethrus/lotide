@@ -1,4 +1,4 @@
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
@@ -6,7 +6,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   // Check if the arrays are the same length
   if (arr1.length !== arr2.length) {
     return false;
@@ -16,10 +16,11 @@ const eqArrays = function(arr1, arr2) {
   return arr1.every((element, index) => element === arr2[index]);
 };
 
-const without = function(source, itemsToRemove) {
+const without = function (source, itemsToRemove) {
+  const itemsToRemoveSet = new Set(itemsToRemove);
   const result = [];
   for (let i = 0; i < source.length; i++) {
-    if (!itemsToRemove.includes(source[i])) {
+    if (!itemsToRemoveSet.has(source[i])) {
       result.push(source[i]);
     }
   }
