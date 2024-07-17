@@ -19,6 +19,8 @@ const assertArraysEqual = function(arr1, arr2) {
 // This function takes a string and returns an object. The keys of the object are the characters that appear in the string, 
 // and the values are arrays containing the positions where each character appears in the string.
 const letterPositions = function(sentence) {
+  // Convert the sentence to lowercase
+  sentence = sentence.toLowerCase();
   const results = {};
   // Loop through our characters in the sentence
   for (let i = 0; i < sentence.length; i++) {
