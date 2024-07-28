@@ -18,6 +18,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const takeUntil = function(array, callback) {
   const result = [];
+  // Loop through our result array
   for (let item of array) {
     if (callback(item)) {
       break;
